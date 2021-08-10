@@ -3,16 +3,16 @@
     android:id="@+id/clubListLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="horizontal">
 
     <TextView
         android:id="@+id/bookClubTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
+        android:layout_marginRight="10dp"
         android:layout_weight="1"
         android:background="@color/white"
-        android:gravity="left|center_vertical"
         android:padding="7dp"
         android:textColor="@color/black" />
 
