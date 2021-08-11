@@ -8,7 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="drawer_layout">#404757</color>
     <color name="toolbar">#EBEBEB</color>
     <color name="main_yellow">#FFB800</color>
+    <color name="grey_background">#F9F9F9</color>
+    <color name="grey_stroke">#EEEEEE</color>
+    <color name="grey_stroke2">#CCCCCC</color>
 </resources>
