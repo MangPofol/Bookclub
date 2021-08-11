@@ -9,7 +9,7 @@ import com.mangpofol.bookclub.DTO.ClubDTO
 import com.mangpofol.bookclub.databinding.BookClubListItemBinding
 
 class MyBookClubAdapter() : RecyclerView.Adapter<MyBookClubAdapter.MyBookClubViewHolder>() {
-    private var clubs: List<ClubDTO> = arrayListOf(
+    private val clubs: List<ClubDTO> = arrayListOf(
         ClubDTO(clubName = "북클럽1"),
         ClubDTO(clubName = "북클럽2"),
         ClubDTO(clubName = "북클럽3")
