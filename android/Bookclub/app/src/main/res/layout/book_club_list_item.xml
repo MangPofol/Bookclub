@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/clubListLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -11,16 +12,18 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="5dp"
         android:layout_weight="1"
-        android:background="@color/white"
+        android:background="@drawable/club_textview"
         android:gravity="left|center_vertical"
-        android:padding="7dp"
+        android:padding="8dp"
         android:textColor="@color/black" />
 
     <Button
+        style="?attr/materialButtonOutlinedStyle"
         android:id="@+id/bookClubButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
+        app:backgroundTint="@color/grey_background"
+        app:strokeColor="@color/grey_stroke"
         android:gravity="center"
         android:minWidth="0dp"
         android:textColor="@color/black" />

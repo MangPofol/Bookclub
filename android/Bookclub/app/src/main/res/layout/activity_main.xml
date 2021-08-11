@@ -38,6 +38,7 @@
                     android:layout_marginTop="100dp"
                     android:text="@string/add_bookclub_title"
                     android:textColor="@color/black"
+                    android:textStyle="bold"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -65,6 +66,7 @@
                     android:layout_marginTop="200dp"
                     android:text="@string/color"
                     android:textColor="@color/black"
+                    android:textStyle="bold"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -73,7 +75,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="230dp"
-                    android:background="@color/black"
+                    android:background="@color/grey_stroke2"
                     android:orientation="horizontal"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -158,8 +160,7 @@
         android:id="@+id/navigation_menu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:background="@color/drawer_layout">
+        android:layout_gravity="start">
 
         <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -174,8 +175,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="이름"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="30sp"
+                android:textStyle="bold"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
@@ -191,111 +193,26 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="아이디:06021"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/black" />
 
                 <Button
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/white"
-                    android:minWidth="0dp"
-                    android:minHeight="0dp"
                     android:text="@string/update_user_info"
-                    android:textColor="@color/black"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/myBookClubLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                app:layout_constraintTop_toBottomOf="@+id/userInfoLayout">
-
-                <ImageView
-                    android:id="@+id/myBookClubHolderImage"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginRight="10dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/my_bookclub"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/black" />
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/myBookClubRecyclerView"
+                android:id="@+id/ExpandableView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                app:layout_constraintTop_toBottomOf="@+id/myBookClubLayout" />
-
-            <Button
-                android:id="@+id/BookClubCreateButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/main_yellow"
-                android:gravity="center"
-                android:text="@string/add_my_bookclub"
-                android:textColor="@color/black"
-                android:visibility="gone"
-                app:layout_constraintTop_toBottomOf="@+id/myBookClubRecyclerView" />
-
-            <LinearLayout
-                android:id="@+id/participateBookClub"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_marginTop="30dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                app:layout_constraintTop_toBottomOf="@+id/BookClubCreateButton">
-
-                <ImageView
-                    android:id="@+id/participateBookClubHolderImage"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginRight="10dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/participate_book_club"
-                    android:textColor="@color/white" />
-            </LinearLayout>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/participateBookClubRecyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                app:layout_constraintTop_toBottomOf="@+id/participateBookClub" />
+                app:layout_constraintBottom_toTopOf="@+id/settingsLayout"
+                app:layout_constraintTop_toBottomOf="@id/userInfoLayout" />
 
             <LinearLayout
-                android:id="@+id/alarm"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                app:layout_constraintTop_toBottomOf="@+id/participateBookClubRecyclerView">
-
-                <ImageView
-                    android:id="@+id/alarmHolderImage"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginRight="10dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/alarm"
-                    android:textColor="@color/white" />
-            </LinearLayout>
-
-            <LinearLayout
+                android:id="@+id/settingsLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
