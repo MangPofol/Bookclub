@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">BookClub</string>
+
+    <!-- activity_login -->
+    <string name="login">log in</string>
+    <string name="signin">회원가입</string>
+
+    <!-- activity_main -->
+    <string name="add_bookclub_title">북클럽 생성하기</string>
+    <string name="hint_club_name">이름을 적어주세요.</string>
+    <string name="color">색상</string>
+    <string name="create">생성하기</string>
+
+    <!-- activity_main: navigationView -->
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="update_user_info">회원정보수정</string>
+    <string name="my_bookclub">나의 북클럽</string>
+    <string name="add_my_bookclub">북클럽 생성하기</string>
+    <string name="participate_book_club">참여한 북클럽</string>
+    <string name="alarm">알림</string>
+    <string name="app_tutorial">앱 활용법</string>
+    <string name="app_version">앱버전</string>
+    <string name="question">문의하기</string>
+    <string name="settings">설정</string>
+</resources>
