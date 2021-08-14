@@ -7,154 +7,52 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/toolbar"
-            android:minHeight="?android:attr/actionBarSize"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:elevation="0dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/toolbar"
+                android:minHeight="?android:attr/actionBarSize" />
+
+        </com.google.android.material.appbar.AppBarLayout>
 
         <FrameLayout
             android:id="@+id/frameLayout"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="100dp"
-                    android:text="@string/add_bookclub_title"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="130dp"
-                    android:background="@color/black"
-                    android:orientation="horizontal"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <EditText
-                    android:layout_width="318dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="145dp"
-                    android:background="@null"
-                    android:hint="@string/hint_club_name"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="200dp"
-                    android:text="@string/color"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <LinearLayout
-                    android:id="@+id/dividingLine"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="230dp"
-                    android:background="@color/grey_stroke2"
-                    android:orientation="horizontal"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    app:layout_constraintTop_toBottomOf="@+id/dividingLine">
-
-                    <RadioButton
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:background="@drawable/color_radio_button"
-                        android:button="@android:color/transparent" />
-
-                    <RadioButton
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:background="@drawable/color_radio_button"
-                        android:button="@android:color/transparent" />
-
-                    <RadioButton
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:background="@drawable/color_radio_button"
-                        android:button="@android:color/transparent" />
-
-                    <RadioButton
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:background="@drawable/color_radio_button"
-                        android:button="@android:color/transparent" />
-
-                    <RadioButton
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:background="@drawable/color_radio_button"
-                        android:button="@android:color/transparent" />
-
-                    <RadioButton
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:background="@drawable/color_radio_button"
-                        android:button="@android:color/transparent" />
-
-                </RadioGroup>
-
-                <Button
-                    android:id="@+id/textButton"
-                    style="@style/Widget.MaterialComponents.Button.TextButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="50dp"
-                    android:minWidth="0dp"
-                    android:minHeight="0dp"
-                    android:text="@string/create"
-                    android:textColor="@color/black"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintRight_toRightOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_height="match_parent"
+            android:layout_marginTop="?android:attr/actionBarSize"
+            android:layout_marginBottom="?android:attr/actionBarSize"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
         </FrameLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:backgroundTint="@color/white"
+            app:elevation="0dp">
+
+            <ImageButton
+                android:id="@+id/writeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_baseline_create_36" />
+        </com.google.android.material.bottomappbar.BottomAppBar>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_menu"
@@ -207,7 +105,8 @@
                 android:id="@+id/ExpandableView"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
                 app:layout_constraintBottom_toTopOf="@+id/settingsLayout"
                 app:layout_constraintTop_toBottomOf="@id/userInfoLayout" />
 
