@@ -5,10 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.mancj.materialsearchbar.MaterialSearchBar
+import com.mangpofol.bookclub.MainActivity
+import com.mangpofol.bookclub.R
 import com.mangpofol.bookclub.adapter.BookListAdapter
-import com.mangpofol.bookclub.adapter.NavigationDrawerAdapter
 import com.mangpofol.bookclub.databinding.FragmentWriteBinding
 
 class WriteFragment: Fragment() {
@@ -22,6 +25,8 @@ class WriteFragment: Fragment() {
         binding = FragmentWriteBinding.inflate(inflater, container, false)
 
         initializeAdapter()
+
+        (activity as MainActivity).changeIcon(R.drawable.ic_baseline_change_history_36)
 
         binding.bookSearchBar.setOnSearchActionListener(object : MaterialSearchBar.OnSearchActionListener{
             override fun onButtonClicked(buttonCode: Int) {
@@ -42,6 +47,11 @@ class WriteFragment: Fragment() {
             }
 
         })
+
+        binding.storeButton.setOnClickListener {
+            val bottomSheet: BottomSheet = BottomSheet()
+            bottomSheet.show(childFragmentManager, bottomSheet.tag)
+        }
 
         return binding.root
     }
