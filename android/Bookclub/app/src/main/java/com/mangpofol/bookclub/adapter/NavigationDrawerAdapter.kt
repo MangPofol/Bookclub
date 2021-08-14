@@ -9,10 +9,14 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.appcompat.content.res.AppCompatResources.getDrawable
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mangpofol.bookclub.MainActivity
+import com.mangpofol.bookclub.R
 import com.mangpofol.bookclub.databinding.NavigationDrawerExpandableViewBinding
+import java.security.AccessController.getContext
 
 class NavigationDrawerAdapter() :
     RecyclerView.Adapter<NavigationDrawerAdapter.NavigationViewHolder>() {
@@ -73,9 +77,11 @@ class NavigationDrawerAdapter() :
             if (holder.expandView.visibility == View.GONE) {
                 expand(holder.expandView)
                 //toggleButton 위로 올라간 이미지로 변경
+                holder.toggleButton.background = getDrawable(it.context, R.drawable.ic_baseline_arrow_drop_up_24)
             } else {
                 collapse(holder.expandView)
                 //toggleButton 아래로 내려간 이미지로 변경
+                holder.toggleButton.background = getDrawable(it.context, R.drawable.ic_baseline_arrow_drop_down_24)
             }
         }
     }
